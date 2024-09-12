@@ -9,7 +9,7 @@ const Test1 = () => {
     { id: 4, test2: false },
   ]);
 
-  Load deleted items from local storage when component mounts
+  // Load deleted items from local storage when component mounts
   useEffect(() => {
     const deletedIds = JSON.parse(localStorage.getItem('deletedIds')) || [];
     setItems(prevItems => prevItems.filter(item => deletedIds.includes(item.id)));
